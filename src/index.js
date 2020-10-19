@@ -32,31 +32,6 @@ myDictionary.set('100', 'hundred');
 
 
 module.exports = function toReadable (number) {
-
-//   if(number >= 0 && number <= 20) {
-//     result += myDictionary.get(number);
-//   }
-//   else {
-//     if(myDictionary.get(number) != undefined) {
-//         result += myDictionary.get(number);
-//     }
-//     for( let i = 0; i < arrNumber.length; ++i) {
-//         if(arrNumber.length == 2) {
-//             result += myDictionary.get(arrNumber[0]);
-//             result += ' ';
-//             result += myDictionary.get(arrNumber[1]);
-//         }
-//         if(arrNumber.length == 3) {
-//             result += myDictionary.get(arrNumber[0]);
-//             result += ' ';
-//             result += myDictionary.get(arrNumber[1]);
-//         }
-//     }
-//     result += `${}`;
-//   }
-//   return result;
-
-
   let result = '';
   let arrNumber = String(number).split('');
 
@@ -67,10 +42,7 @@ module.exports = function toReadable (number) {
       if((number > 10 && number <20) || arrNumber[1] == 0){
         return result = myDictionary.get(arrNumber[0] + arrNumber[1]);
       }
-      else {// ветка оставшихся чисел
-        // result += myDictionary.get(arrNumber[0]*10);
-        // result += ' ';
-        // result += myDictionary.get(arrNumber[1]);
+      else {
         return result = `${myDictionary.get(arrNumber[0]+'0')} ${myDictionary.get(arrNumber[1])}`;
       }
   }
